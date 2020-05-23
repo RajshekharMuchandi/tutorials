@@ -12,7 +12,7 @@ public class StreamOperations {
         stringList.add("Gone with the wind");
         System.out.println("ANY MATCH :" +stringList.stream().anyMatch((value) -> { return value.startsWith("One"); }));
         System.out.println("ALL MATCH :" +stringList.stream().allMatch((value) -> { return value.startsWith("One"); }));
-        System.out.println("NONE MATCH :" +stringList.stream().allMatch((value) -> { return value.startsWith("A"); }));
+        System.out.println("NONE MATCH :" +stringList.stream().noneMatch((value) -> { return value.startsWith("A"); }));
         System.out.println("-------------------------------------------------------------------");
     }
 
