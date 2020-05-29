@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ribbon-service
+
+server:
+  port: 8081
+
+rest-server:
+  ribbon:
+    eureka: true # By default Ribbon will get the actively running microservices from Eureka, let's disable that strategy
+    # listOfServers: localhost:8080 #, localhost:9003, localhost:9004
+    serverListRefreshInterval: 5000
+
+eureka:
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
